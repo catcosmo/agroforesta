@@ -18,5 +18,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
     </div>
+
+    <!-- i18n languages -->
+    <div id='locale'>
+      <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+          <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, {:locale => locale} %>
+      <% end %>
+    </div>
   </div>
 </nav>
