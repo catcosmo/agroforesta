@@ -1,0 +1,29 @@
+ru:
+  refinery:
+    plugins:
+      services:
+        title: Services
+    services:
+      admin:
+        services:
+          actions:
+            create_new: Добавить Service
+            reorder: Изменить порядок Services
+            reorder_done: Закончить изменять порядок Services
+          records:
+            title: Services
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Services" не найдено. Нажмите "Добавить Service" чтобы создать service.
+          service:
+            view_live_html: Просмотреть service вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать service
+            delete: Удалить service навсегда
+      services:
+        show:
+          other: Другие Services
+  activerecord:
+    attributes:
+      'refinery/services/service':
+        title: Title
+        description: Description
+        icon: Icon

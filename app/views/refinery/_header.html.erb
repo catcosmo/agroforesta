@@ -1,7 +1,15 @@
 <!-- install bootstrap for refinery http://stackoverflow.com/questions/14759712/rails-bootstrap-navbar-and-refinerycms & install page layout: http://railscasts.com/episodes/332-refinery-cms-basics?view=comments-->
 
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+  <div id="menu-bar" class="container-fluid">
+
+    <!-- i18n languages -->
+    <div id='locale' class="pull-right">
+      <% ::Refinery::I18n.frontend_locales.each do |locale| %>
+          <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, {:locale => locale} %>
+          |
+      <% end %>
+    </div>
 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -19,11 +27,8 @@
       <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
     </div>
 
-    <!-- i18n languages -->
-    <div id='locale'>
-      <% ::Refinery::I18n.frontend_locales.each do |locale| %>
-          <%= link_to_if Globalize.locale.to_s != locale.to_s, locale, {:locale => locale} %>
-      <% end %>
-    </div>
+
   </div>
 </nav>
+
+
