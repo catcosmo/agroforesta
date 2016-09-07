@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905072817) do
+ActiveRecord::Schema.define(version: 20160906123231) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -132,6 +132,41 @@ ActiveRecord::Schema.define(version: 20160905072817) do
   add_index "refinery_blog_posts", ["access_count"], name: "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], name: "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], name: "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_image_slide_translations", force: :cascade do |t|
+    t.integer  "refinery_image_slide_id", null: false
+    t.string   "locale",                  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "title"
+    t.string   "caption"
+    t.string   "link_url"
+    t.text     "body"
+  end
+
+  add_index "refinery_image_slide_translations", ["locale"], name: "index_refinery_image_slide_translations_on_locale"
+  add_index "refinery_image_slide_translations", ["refinery_image_slide_id"], name: "index_5ac35453397a11bd57cdf12fa8d7a3d98afd3e0e"
+
+  create_table "refinery_image_slides", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.integer  "image_slideshow_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "image_id"
+    t.string   "caption"
+    t.string   "link_url"
+  end
+
+  create_table "refinery_image_slideshows", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "js_config"
+    t.string   "height"
+    t.string   "width"
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false

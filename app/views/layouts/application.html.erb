@@ -4,7 +4,6 @@
 <% site_bar = render('/refinery/site_bar', :head => true) -%>
 <%= render '/refinery/head' %>
 <body>
-<%= site_bar -%>
 <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 <div id="page_container" class="container">
   <header id="header">
@@ -16,8 +15,12 @@
   <footer class="footer">
     <%= render '/refinery/footer' -%>
   </footer>
+  <%= site_bar -%>
+
+  <%= render '/refinery/javascripts' %>
+
+
 </div>
-<%= render '/refinery/javascripts' %>
 </body>
 </html>
 
