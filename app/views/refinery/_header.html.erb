@@ -1,7 +1,7 @@
 <!-- install bootstrap for refinery http://stackoverflow.com/questions/14759712/rails-bootstrap-navbar-and-refinerycms & install page layout: http://railscasts.com/episodes/332-refinery-cms-basics?view=comments-->
 
 <nav class="navbar navbar-default" role="navigation">
-  <div id="menu-bar" class="container-fluid">
+  <div id="menu-bar" class="container">
 
     <!-- i18n languages -->
     <div id='locale' class="pull-right">
@@ -19,7 +19,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><%=Refinery::Core::site_name %></a>
+      <a class="navbar-brand" href="#">
+        <%= image_tag("logoBlack.png", :alt => "logo", :id => 'logo') %>
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
