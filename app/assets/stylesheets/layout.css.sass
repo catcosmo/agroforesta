@@ -1,4 +1,6 @@
 /*fonts*/
+h1, h2, h3, h4
+  font-family: 'Loved by the King', cursive
 
 /*general/colors*/
 $green: #37661b
@@ -6,32 +8,117 @@ $bright-green: #6e9600
 $orange: #d84b19
 $nav-height: 90px
 
+.green
+  color: $bright-green
+
+.border-bottom-grey
+  border-bottom: 1px solid #eeeeee
+  margin-bottom: 50px
+
+.margin-bottom-50
+  margin-bottom: 50px
+
+p
+  a
+    border-bottom: 1px solid $bright-green
+    box-shadow: 0px -4px 0px $bright-green inset
+    .btn
+    border-bottom: none
+    box-shadow: none
+
 
 #page
   background-color: white
 
+
 /*slider*/
 
+#main-slider
+  margin-top: 5px
+
+.carousel-caption-shadow
+  background-color: rgba(255, 255, 255, 0.3)
+  margin: 10px
+  width: 170px
+  padding: 15px
+
+.carousel-caption
+  bottom: -10px
+  right: 50px
+
+
 /*header*/
-#menu-bar
-  height: $nav-height
+#navbar
   background-color: white
-  *
-    color: $green
+  border-color: white
+  margin-bottom: 0px
+  height: $nav-height
+  #menu-bar
+    margin-right: 0px
+    margin-top: $nav-height / 2 - 6
+    padding-bottom: 6px
+  .navbar-collapse
+    .navbar-nav
+      .active
+        a
+          border-bottom: none
+          box-shadow: none
+          //color: darkorange
+          //background-color: white
+      li
+        &:hover
+          border-bottom: $bright-green solid 6px
+        a
+          color: $bright-green
+          font-family: 'Loved by the King', cursive
+          font-size: 1.4em
+        .dropdown-menu
+          li
+            &:hover
+              border-bottom: 0px
+
+#locale
+  padding-top: 5px
+  padding-right: 30px
+  font-family: 'Loved by the King', cursive
+  color: darkorange
+  a
+    color: $bright-green
+    &:hover
+      color: $green
+      text-decoration: none
+
 
 #logo
   height: $nav-height * 0.6
-
+  margin-top: - $nav-height / 3
 
 
 /*footer*/
 .footer
   bottom: 0
+  font-family: 'Loved by the King', cursive
+  color: $bright-green
+  text-align: center
+  font-size: 1.2em
+  p
+    a
+      color: $bright-green
+      text-decoration: none
+      border-bottom: none
+      box-shadow: none
 
+/*home*/
+.jumbotron
+  background-image: image-url("home/djungel.jpg")
+  .btn-default
+    background-color: rgba(255,255,255,0.2)
+    color: white
+  h2, p
+    color: white
+    opacity: 1
 
-/**/
-
-/**/
+/*page text*/
 
 /**/
 

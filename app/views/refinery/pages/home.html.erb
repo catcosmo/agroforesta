@@ -5,18 +5,22 @@
       <li data-target='#main-slider' data-slide-to = '2'></li>
     </ol>
 
+    <!-- slider -->
     <div class='carousel-inner' role="listbox">
       <div class="item active">
-        <%= image_tag("blau.jpg", :alt => "test1", :class => 'img-responsive') %>
+        <%= image_tag("home/jungle01.jpg", :alt => "test1", :class => 'img-responsive') %>
         <div class="carousel-caption">
-          <h3>Peru Projekt</h3>
+          <h3 class="carousel-caption-shadow pull-right">Bildtitel und so..</h3>
         </div>
       </div>
       <div class="item">
-        <%= image_tag("orange.jpg", :alt => "test2", :class => 'img-responsive') %>
+        <%= image_tag("home/jungle02.jpg", :alt => "test2", :class => 'img-responsive') %>
+        <div class="carousel-caption">
+          <h3 class="carousel-caption-shadow pull-right">oder kein Titel..</h3>
+        </div>
       </div>
       <div class="item">
-        <%= image_tag("lila.jpg", :alt => "test3", :class => 'img-responsive') %>
+        <%= image_tag("home/jungle03.jpg", :alt => "test3", :class => 'img-responsive') %>
       </div>
     </div>
 
@@ -29,6 +33,97 @@
 
   </div>
   <%= render '/refinery/content_page' %>
+
+  <!-- home content -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h1>
+            Agro Foresta <small>Gemeinsam für Umweltschutz in Lateinamerika</small>
+          </h1>
+        </div>
+      </div>
+    </div>
+  <br>
+    <div class="row border-bottom-grey">
+      <div class="col-md-4 margin-bottom-50">
+        <%= image_tag("home/djungelLeo.jpg", :alt => "vogel", :class => 'img-circle center-block') %>
+        <br><h2 align="center">
+          Huari
+        </h2>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        </p>
+        <br>
+        <button type="button center-block" class="btn btn-default center-block">
+          Mehr
+        </button>
+      </div>
+      <div class="col-md-4 margin-bottom-50">
+        <%= image_tag("home/djungelVogel.jpg", :alt => "vogel", :class => 'img-circle center-block') %>
+        <br><h2 align="center">
+          Projekt in Peru
+        </h2>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        </p>
+        <br>
+        <button type="button" class="btn btn-default center-block">
+          Mehr
+        </button>
+      </div>
+      <div class="col-md-4 margin-bottom-50">
+        <%= image_tag("home/djungelFaultier.jpg", :alt => "vogel", :class => 'img-circle center-block') %>
+        <br><h2 align="center">
+          Zukünftige Projekte
+        </h2>
+        <p>
+          Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        </p>
+        <br>
+        <button type="button" class="btn btn-default center-block">
+          Mehr
+        </button>
+      </div>
+    </div>
+
+    <div class="row border-bottom-grey margin-bottom-50">
+      <div class="col-md-6 margin-bottom-50">
+        <h2>
+          Unterstützt uns!
+        </h2>
+        <p>
+          Werde Fördermitglied oder unterstütz uns mit einer Spende. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        </p>
+        <p>
+          <a class="btn green" href="#">Mehr Erfahren... »</a>
+        </p>
+      </div>
+      <div class="col-md-6 margin-bottom-50">
+        <h2>
+          Aktuelles aus dem Blog.
+        </h2>
+        <p>
+          Es geht los! Mit der großzügegen Unterstützung von Dornrößchen bliblablubb! Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        </p>
+        <p>
+          <a class="btn green" href="#">Artikel lesen... »</a>
+        </p>
+      </div>
+    </div>
+
+
+
+  <div id='jumbo' class="jumbotron">
+    <h2>
+      Herzlich Willkommen in unserem Laden!
+    </h2>
+    <p>
+      Hier ein paar Zeilen zum Verein. Vaporware raw denim salvia la croix plaid Williamsburg chartreuse. Whatever asymmetrical roix qbiodiesel kickstarter la cuinoa, shabby chic tumeric poke tattooed probably haven't heard of them authentic, hexagon man bun tilde asymmetrical taxidermy shoreditch DIY blue bottle. Glossier vegan ethical, drinking vinegar freegan edison bulb. Pok pok narwhal blog, freegan.    </p>
+    <p>
+      <a class="btn btn-default btn-large" href="#">Über den Verein...</a>
+    </p>
+  </div>
 
 
 
