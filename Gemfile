@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use pg as the database for Active Record
-gem 'pg', '~> 0.18.4'
-
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -69,6 +66,8 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 # for Heroku Deployment
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
+  gem 'pg', '~> 0.18.4'
+
 end
 
 ruby '2.3.0'
