@@ -3,10 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.18.4'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -39,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
 end
 
 group :development do
@@ -64,3 +64,11 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 #  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
 
 # gem 'refinerycms-services', path: 'vendor/extensions'
+
+# for Heroku Deployment
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+
+end
+
+ruby '2.3.0'
