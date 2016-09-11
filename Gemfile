@@ -32,17 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# for Heroku Deployment
-group :production do
-  gem 'rails_12factor', '~> 0.0.3'
-  gem 'pg', '~> 0.18.4'
-
-end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  group :development, :test do
   gem 'sqlite3'
+end
 
 end
 
@@ -70,5 +66,15 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 
 # gem 'refinerycms-services', path: 'vendor/extensions'
 
+# for Heroku Deployment
+
+gem 'heroku'
+
+group :production do
+  gem 'dragonfly-s3_data_store'
+  gem 'rails_12factor'
+  gem 'puma'
+  gem 'fog-aws'
+end
 
 ruby '2.3.0'
