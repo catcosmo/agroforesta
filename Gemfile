@@ -68,9 +68,10 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 
 # for Heroku Deployment
 
-gem 'heroku'
+  gem 'heroku'
 
 group :production do
+  gem 'pg'
   gem 'dragonfly-s3_data_store'
   gem 'rails_12factor'
   gem 'puma'
